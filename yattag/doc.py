@@ -1,4 +1,4 @@
-from comparator.yattag.simpledoc import dict_to_attrs, html_escape, attr_escape, SimpleDoc, DocError
+from Comparator.yattag.simpledoc import dict_to_attrs, html_escape, attr_escape, SimpleDoc, DocError
 
 try:
     range = xrange  # for Python 2/3 compatibility

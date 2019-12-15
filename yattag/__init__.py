@@ -57,6 +57,6 @@ Full tutorial on yattag.org_
 __author__ = "Benjamin Le Forestier (benjamin@leforestier.org)"
 __version__ = '1.12.2'
 
-from comparator.yattag.simpledoc import SimpleDoc
-from comparator.yattag.doc import Doc
-from comparator.yattag.indentation import indent, NO, FIRST_LINE, EACH_LINE
+from Comparator.yattag.simpledoc import SimpleDoc
+from Comparator.yattag.doc import Doc
+from Comparator.yattag.indentation import indent, NO, FIRST_LINE, EACH_LINE

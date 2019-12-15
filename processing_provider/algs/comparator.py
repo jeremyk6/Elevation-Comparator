@@ -19,7 +19,7 @@ from io import StringIO
 import matplotlib.pyplot as plt
 from statistics import mean
 
-from comparator.yattag import Doc, indent
+from Comparator.yattag import Doc, indent
 
 import processing
 

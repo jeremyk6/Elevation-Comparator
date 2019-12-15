@@ -3,10 +3,10 @@ name=Comparator
 qgisMinimumVersion=3.0
 description=Comparaison de MNT.
 version=0.1
-author=Jérémy Kalsron
-email=jeremy.kalsron@gmail.com
+author=Groupe 3 Terrain Géonum
+email=jeremyk6@anatidaepho.be
 
-about=Plugin qui ajoute un traitement Processing pour comparer plusieurs MNT et obtenir un rapport HTML.
+about=Plugin qui ajoute des traitements Processing pour comparer plusieurs MNT.
 
 tags=dem, dtm, comparison
 
