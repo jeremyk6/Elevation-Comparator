@@ -25,7 +25,7 @@ class Provider(QgsProcessingProvider):
 
     def name(self, *args, **kwargs):
 
-        return 'Comparator'
+        return 'Elevation Comparator'
 
     def icon(self):
         return QIcon(':/plugins/comparator/icon.png')
