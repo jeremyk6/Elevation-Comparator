@@ -14,6 +14,7 @@
 from qgis.core import QgsProcessing, QgsProcessingAlgorithm, QgsProcessingMultiStepFeedback, QgsProcessingParameterVectorLayer, QgsProcessingParameterFileDestination, QgsProcessingParameterMultipleLayers, QgsProcessingParameterNumber, QgsProcessingParameterVectorDestination
 from qgis.core import QgsGeometry, QgsVectorLayer, QgsFeature, QgsVectorFileWriter, QgsFields, QgsWkbTypes, QgsCoordinateReferenceSystem, QgsFields, QgsField, QgsDistanceArea
 from qgis.PyQt.QtCore import QVariant
+from qgis.PyQt.QtGui import QIcon
 
 from io import StringIO
 import matplotlib.pyplot as plt
@@ -165,6 +166,9 @@ class Comparator(QgsProcessingAlgorithm):
 
     def createInstance(self):
         return Comparator()
+
+    def icon(self):
+        return QIcon(':/plugins/comparator/resources/compare.png')
 
     def meanDev(self, l):
         diffs = []

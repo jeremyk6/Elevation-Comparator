@@ -7,18 +7,21 @@ from .algs.comparator import Comparator
 import os
 import glob
 
+class Model(QgsProcessingModelAlgorithm):
+    def __init__(self, path, icon):
+        super(Model, self).__init__()
+        self.img = icon
+        self.fromFile(path)
+
+    def icon(self):
+        return self.img
+
 class Provider(QgsProcessingProvider):
 
     def loadAlgorithms(self, *args, **kwargs):
         self.addAlgorithm(Comparator())
-        for filename in glob.glob(os.path.join(os.path.dirname(__file__),"models", '*.model3')):
-            alg = QgsProcessingModelAlgorithm()
-            if not alg.fromFile(filename):
-                print("Erreur : impossible de charger de modèle depuis {}".format(filename))
-                return
-            else:
-                self.addAlgorithm(alg)
-        
+        self.addAlgorithm(Model(os.path.join(os.path.dirname(__file__),"models", 'analyse_precision.model3'), QIcon(':/plugins/comparator/resources/precision.png')))
+        self.addAlgorithm(Model(os.path.join(os.path.dirname(__file__),"models", 'rendu_carto.model3'), QIcon(':/plugins/comparator/resources/carto.png')))
 
     def id(self, *args, **kwargs):
         return 'comparator'
